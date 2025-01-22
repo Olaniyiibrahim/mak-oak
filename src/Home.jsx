@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom";
-import { MdCancel } from "react-icons/md";
 import { useState } from "react";
 import { FaHome } from "react-icons/fa";
 import { VscTools } from "react-icons/vsc";
@@ -38,8 +37,25 @@ export default function Home() {
                         }
                     </ul>
                 </header>
+                <div className="text-center space-y-5 mt-16">
+                    <h1 className="border-solid border-8 p-6 text-4xl border-white w-[750px] mx-auto text-white">Welcome to Mao-Oak Resources Limited!</h1>
+                    <div className="bg-black/30 text-white w-[600px] mx-auto h-10 p-2 backdrop-blur-4xl ">
+                        Discover our innovative solutions tailored to meet your needs.
+                    </div>
+                    <div className="flex flex-col space-y-3 text-orange-700 w-[900px] mx-auto">
+                        <button className="bg-black rounded-md p-2 hover:text-white">
+                            |Engineering, Procurement, Construction, Installation & Commissioning(EPCIC) | General Services| (Clickable)
+                        </button>
+                        <button className="bg-black rounded-md p-2 w-[700px] mx-auto hover:text-white">
+                            Fire Protection |Fire Detection | Gas Detection| Fire Systems  (Clickable)
+                        </button>
+                        <button className="bg-black rounded-md p-2 w-[200px] mx-auto hover:text-white">
+                            |Safety| (Clickable)
+                        </button>
+                    </div>
+                </div>
             </div>
-            <div className="flex p-3">
+            {/* <div className="flex p-3">
                 <div className="bg-white w-1/2 p-3 text-left space-y-5">
                 <h2 className="font-bold text-2xl text-center">SYNOPSIS</h2>
                     <p>Mao-Oak Resource Ltd incorporated
@@ -314,7 +330,7 @@ export default function Home() {
                     </div>
                 </div>
                     <img src={"image/fe44595ba0.jpg"} alt="" className="h-[300px] w-full "/>
-            </div>
+            </div> */}
         </div>
     )
 }
