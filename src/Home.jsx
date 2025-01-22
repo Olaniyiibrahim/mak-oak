@@ -16,12 +16,12 @@ export default function Home() {
     //     setModel(false)
     // }
     return (
-        <div onClick={toggleModal}>
-            <div className='bg-[url("image/0a3610084c.jpg")] bg-cover bg-no-repeat h-screen'>
-                <header className="flex items-center px-36 p-5 justify-between">
+        <>
+            <div className='bg-[url("image/0a3610084c.jpg")] bg-cover bg-no-repeat h-screen text-center space-y-19'>
+                <header className="z-10 flex items-center justify-between px-5 py-2 ">
                     <img src={"image/Mao-Oak Resources Limited updated.png"} className="w-[100px]" alt="" />
                     <ul className="flex flex-col text-white mt-10 bg-black items-center justify-center py-3 space-y-2 w-[150px]">
-                        <li onClick={toggleModal} className="flex space-x-5 p-1"><NavLink to="/" className="flex space-x-1 p-1"><FaHome className="mt-1"/><span>Home</span></NavLink>{
+                        <li onClick={toggleModal} className="flex space-x-5 p-1 hover:text-orange-700"><NavLink to="/" className="flex space-x-1 p-1"><FaHome className="mt-1"/><span>Home</span></NavLink>{
                             !isModalOpen && (
                                 <FaBars className="mt-2 text-orange-600" />
                             )
@@ -29,15 +29,15 @@ export default function Home() {
                         {
                             isModalOpen && (
                                 <div className="space-y-2">
-                                    <li onClick={toggleModal}><NavLink to="/about" className="flex space-x-1"><IoPeople /><span>About</span></NavLink></li>
-                                    <li><NavLink to="/career" className="flex space-x-1"><AiOutlineProduct /><span>Career</span></NavLink></li>
-                                    <li> <NavLink to="/" className="flex space-x-1"><VscTools /><span>Service</span></NavLink></li>
+                                    <li onClick={toggleModal}><NavLink to="/about" className="flex space-x-1 hover:text-orange-700"><IoPeople /><span>About</span></NavLink></li>
+                                    <li><NavLink to="/career" className="flex space-x-1 hover:text-orange-700"><AiOutlineProduct /><span>Career</span></NavLink></li>
+                                    <li> <NavLink to="/" className="flex space-x-1 hover:text-orange-700"><VscTools /><span>Service</span></NavLink></li>
                                 </div>
                             )
                         }
                     </ul>
                 </header>
-                <div className="text-center space-y-5 mt-16">
+                <div className=" flex flex-col items-center justify-center space-y-3">
                     <h1 className="border-solid border-8 p-6 text-4xl border-white w-[750px] mx-auto text-white">Welcome to Mao-Oak Resources Limited!</h1>
                     <div className="bg-black/30 text-white w-[600px] mx-auto h-10 p-2 backdrop-blur-4xl ">
                         Discover our innovative solutions tailored to meet your needs.
@@ -331,6 +331,6 @@ export default function Home() {
                 </div>
                     <img src={"image/fe44595ba0.jpg"} alt="" className="h-[300px] w-full "/>
             </div> */}
-        </div>
+        </>
     )
 }
